@@ -3,6 +3,7 @@ document.getElementById("menuToggle").addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 

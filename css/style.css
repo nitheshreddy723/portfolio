@@ -110,44 +110,50 @@ footer {
   background-color: #333;
   color: #fff;
 }
-
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    background-color: #f9faf7;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+/******************* Skills Section************* */
+#skills {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  /* background-color: #fffbe6; Light yellow background */
+  border-radius: 12px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+  text-align: center;
 }
 
-.project-card a {
-  display: inline-block;
-  padding: 10px 20px;
+#skills h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills-list li {
   background-color: #d0e10f;
   color: black;
-  text-decoration: none;
-  font-size: 10px;
-  font-weight: bold;
+  padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  /* border: 2px solid black; */
+  transition: all 0.3s ease;
 }
 
-.project-card a:hover {
+.skills-list li:hover {
   background-color: black;
   color: #d0e10f;
+  cursor: pointer;
 }
+/**************************** contact ********************** */
 #contact {
   max-width: 900px;
   margin: 80px auto;
@@ -207,9 +213,14 @@ footer {
   border-color: #222;
   outline: none;
 }
+body.menu-open {
+  overflow: hidden;
+}
+
 
 .contact-form button {
   background-color: #d0e10f;
+  height: auto;
   color: black;
   padding: 12px 25px;
   border: none;
@@ -229,47 +240,74 @@ footer {
   font-weight: bold;
   color: green;
 }
-/* Skills Section */
-#skills {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  /* background-color: #fffbe6; Light yellow background */
-  border-radius: 12px;
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
-  text-align: center;
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #d0e10f;
+    position: absolute;
+    top: 73px;
+    right: -300px; /* start hidden to the right */
+    height:210px;
+    width: 200px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    right: 0; 
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
-#skills h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #222;
-}
 
-/* Skills List */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
+/* 
+@media (max-width: 768px) {
+  .menu_open,.menu_close{
+        display: block;
+        margin-right: 100px;
+    }
+  .nav-links {
+    flex-direction: column;
+    background-color: #e6f604;
+    position: absolute;
+    top: 73px;
+    right: -500px;
+    height: 100%;
+    width: 300px;
+    display: none;
+    transition: all ease 1s;
+  }
 
-.skills-list li {
+  .nav-links.active {
+    display: block;
+    right: -100px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+} */
+
+
+.project-card a {
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #d0e10f;
   color: black;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
+  text-decoration: none;
+  font-size: 10px;
   font-weight: bold;
-  /* border: 2px solid black; */
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.skills-list li:hover {
+.project-card a:hover {
   background-color: black;
   color: #d0e10f;
-  cursor: pointer;
 }
-
