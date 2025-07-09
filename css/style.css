@@ -153,6 +153,48 @@ footer {
   color: #d0e10f;
   cursor: pointer;
 }
+/******************* Education Section ***************/
+
+.section-education {
+  background-color: #f8f6f6;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-education h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.education-item {
+  background-color: white;
+  border-left: 6px solid #d0e10f;
+  margin: 20px auto;
+  padding: 20px 25px;
+  max-width: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-item h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.education-item p {
+  color: #555;
+  font-size: 14px;
+  margin: 2px 0;
+}
+
 /**************************** contact ********************** */
 #contact {
   max-width: 900px;
@@ -248,7 +290,7 @@ body.menu-open {
     position: absolute;
     top: 73px;
     right: -300px; /* start hidden to the right */
-    height:210px;
+    height:260px;
     width: 200px;
     transition: right 0.5s ease;
     z-index: 1000;
